@@ -3,15 +3,26 @@ body {
     /* color: #28242c; */
 }
 
-p {
+.lead-text{
     color: whitesmoke;
     margin-top: 20px;
+}
+
+p {
+    color: whitesmoke;
 }
 
 .table-format{
     padding-top: 5%;
     padding-left: 10%;
     padding-right: 10%;
+}
+
+.table-format1{
+    padding-top: 5%;
+    padding-left: 40%;
+    padding-right: 40%;
+    background-color:#222529;
 }
 
 .form-format{
@@ -28,4 +39,12 @@ p {
 
 .form-label{
     color: whitesmoke;
+}
+
+.about-text{
+    margin: 5%;
+}
+
+.car{
+    margin: 10%;
 }
