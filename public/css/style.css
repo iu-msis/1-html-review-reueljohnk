@@ -7,3 +7,25 @@ p {
     color: whitesmoke;
     margin-top: 20px;
 }
+
+.table-format{
+    padding-top: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.form-format{
+    padding-top: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.form-item-format{
+    padding-top: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.form-label{
+    color: whitesmoke;
+}
