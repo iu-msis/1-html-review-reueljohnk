@@ -18,8 +18,8 @@ p {
     padding-right: 10%;
 }
 
-.table-format1{
-    padding-top: 5%;
+#index-table-format{
+    padding-top: 1%;
     padding-left: 40%;
     padding-right: 40%;
     background-color:#222529;
@@ -45,6 +45,14 @@ p {
     margin: 5%;
 }
 
-.car{
+.hometext{
     margin: 10%;
+}
+
+.card-format{ 
+    padding: 10%;
+}
+
+.card-source{
+    font-size: 10px;
 }
