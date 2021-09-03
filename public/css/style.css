@@ -3,6 +3,10 @@ body {
     /* color: #28242c; */
 }
 
+h5{
+    color: whitesmoke;
+    padding: 2%;
+}
 .lead-text{
     color: whitesmoke;
     margin-top: 20px;
@@ -55,4 +59,8 @@ p {
 
 .card-source{
     font-size: 10px;
+}
+
+.shopcards{
+    margin: 5%;
 }
