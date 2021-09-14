@@ -11,6 +11,15 @@
     integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="./css/style.css">
 
+  <!-- VueJS CDN link -->
+  <script src="https://unpkg.com/vue@next"></script>
+
+  <!-- Sortable link -->
+  <script src="./js/sortable.min.js"></script>
+
+  <!-- Sorttable CSS -->
+  <link rel="stylesheet" href="./css/sortable-theme-dark.css" />
+
   <title>Chad's Blog</title>
 
 </head>
@@ -49,7 +58,7 @@
     crossorigin="anonymous"></script>
 
   <div class="table-format col-lg-12 text-center">
-    <table class="table table-dark table-hover">
+    <table class="table table-dark table-hover sortable-theme-bootstrap" data-sortable>
       <thead>
         <tr>
           <th scope="col">#</th>
