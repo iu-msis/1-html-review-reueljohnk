@@ -11,6 +11,10 @@
     integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="./css/style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+  <!-- VueJS CDN link -->
+  <script src="https://unpkg.com/vue@next"></script>
+
   <title>Chad's Blog</title>
 
 </head>
@@ -44,56 +48,55 @@
 
 <body>
   <!-- Bootstrap Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
-    crossorigin="anonymous"></script>
-  <div class="container-fluid text-center">
-    <img src="./img/gigachad.jpg" class="rounded-circle" height="300px" alt="Chad">
-  </div>
+  <script 
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"crossorigin="anonymous">
+  </script>
 
-  <div class="container-fluid text-center">
-    <p class="lead lead-text"> Hi, welcome to my blog. I'm Chad.</p>
-  </div>
-
-  <div class=" text-center" id="index-table-format">
-    <table class="table table-borderless">
-      <tbody>
+  <div class="text-center" id="index-table-format">
+    <table class="table table-borderless" >
+      <tbody id="bioApp">
         <tr>
           <td>
-            <i class="bi bi-person" style="font-size: 1.5rem; color: white; "></i>
-            <p>Chad</p>
+          <div>
+            <img v-bind:src="person.picture.large" class="rounded-circle" alt="Chad">
+          </div>
           </td>
-
+        </tr>
+        <tr>
+          <td >
+            <i class="bi bi-person" style="font-size: 1.5rem; color: white; "></i>
+            <p>{{ person.name.title }} {{ person.name.first }} {{ person.name.last }}</p>
+          </td>
         </tr>
         <tr>
           <td>
             <i class="bi bi-globe" style="font-size: 1.5rem; color: white; "></i>
-            <p>United States</p>
+            <p>{{ person.location.country }}</p>
           </td>
         </tr>
         <tr>
           <td>
             <i class="bi bi-calendar2-event" style="font-size: 1.5rem; color: white; "></i>
-            <p>19th Aug 1969</p>
+            <p>{{ person.dob.date }}</p>
           </td>
         </tr>
         <tr>
           <td>
             <i class="bi bi-person-check" style="font-size: 1.5rem; color: white; "></i>
-            <p>35 y.o</p>
+            <p>{{ person.dob.age }}</p>
           </td>
         </tr>
         <tr>
           <td>
             <i class="bi bi bi-envelope-fill" style="font-size: 1.5rem; color: white; "></i>
-            <a href="mailto:chad@chad.com">
-              <p>chad@chad.com</p>
-            </a>
+            <p>
+              <a v-bind:href="'mailto:'+person.email">{{ person.email }}</a>
+            </p>
           </td>
         </tr>
     </table>
   </div>
-
+  <script src="js/index.js"></script>
 </body>
 
 </html>
