@@ -22,6 +22,12 @@ const Offer = {
             ]
         }
     },
+    computed: {
+        prettyBirthday(){
+            return dayjs(this.person.dob.date).format("DD MMM YYYY")
+        }
+
+    },
     created() {
         fetch('https://randomuser.me/api/')
         .then( response => response.json() )
