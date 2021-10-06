@@ -16,6 +16,10 @@ p {
     color: whitesmoke;
 }
 
+th {
+    color: whitesmoke;
+}
+
 .table-format{
     padding-top: 5%;
     padding-left: 10%;

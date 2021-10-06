@@ -55,10 +55,47 @@
     integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
     </script>
 
-  <div class="text-center" id="index-table-format">
-    <table id="bioApp" class="table table-borderless">
-      <tbody v-if="person">
+  
+  <div id="bioApp" class="text-center" id="index-table-format">
+    <table  class="table table-bordered">
+      <thead>
         <tr>
+          <th><p>Username</p></th>
+          <th><p>Student name</p></th>
+        </tr>
+      </thead>
+      <tbody >
+        <tr v-for="s in students" v-on:click="selectStudent(s)">
+          <td><p class="userName"> {{ s.username }}</p></td>
+          <td><p class="studentName"> {{ s.name }}</p></td>
+        </tr>
+      </tbody>
+      </table>
+
+      <table  class="table table-bordered">
+        <thead>
+          <tr>
+            <th><p>Company</p></th>
+            <th><p>Salary</p></th>
+            <th><p>Bonus</p></th>
+            <th><p>Offer Date</p></th>
+            <th><p>Status</p></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="offer in offers">
+            <td><p>{{ offer.companyName }}</p></td>
+            <td><p>{{ offer.salary }}</p></td>
+            <td><p>{{ offer.bonus }}</p></td>
+            <td><p>{{ offer.offerDate }}</p></td>
+          </tr>
+        </tbody>
+        </table>
+        <div v-if="offers.length == 0">
+          <h3>No offers! 😢</h3>
+        </div>
+          
+        <!-- <tr>
           <td>
             <div>
               <img v-bind:src="person.picture.large" class="rounded-circle" alt="Chad">
@@ -103,7 +140,8 @@
               <a v-bind:href="'mailto:'+person.email">{{ person.email }}</a>
             </p>
           </td>
-        </tr>
+        </tr> -->
+          
     </table>
   </div>
   <script src="js/index.js"></script>
