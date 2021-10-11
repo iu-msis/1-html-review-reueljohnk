@@ -22,6 +22,10 @@ const Offer = {
                     console.error(err);
                 })
         },
+        prettyDollar(n) {
+            const d = new Intl.NumberFormat("en-US").format(n);
+            return "$" + d;
+        },
         fetchBookData() {
             fetch('/api/book/')
             .then( response => response.json() )
