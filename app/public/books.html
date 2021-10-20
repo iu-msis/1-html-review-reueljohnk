@@ -83,42 +83,45 @@
         </tr>
       </tbody>
     </table>
-  </div>
 
-  <div class="col-6 form form-format">
-    <div class="form-item-format row">
-      <label for="title" class="form-label">Title</label>
-      <input type="text" class="form-control" placeholder="Title" id="title">
-    </div>
+    <form v-on:submit.prevent="addBook">
+      <div class="col-6 form form-format">
+        <div class="form-item-format row">
+          <label for="title" class="form-label">Title</label>
+          <input type="text" v-model="bookForm.title" class="form-control" placeholder="Title" id="title">
+        </div>
 
-    <div class="form-item-format row">
-      <label for="auth" class="form-label">Author(s)</label>
-      <input type="text" class="form-control" placeholder="Author(s)" id="auth">
-    </div>
+        <div class="form-item-format row">
+          <label for="auth" class="form-label">Author(s)</label>
+          <input type="text" v-model="bookForm.authors" class="form-control" placeholder="Author(s)" id="auth">
+        </div>
 
-    <div class="form-item-format row">
-      <label for="yearpub" class="form-label">Year Published</label>
-      <input type="number" class="form-control" placeholder="Year Published" id="yearpub">
-    </div>
+        <div class="form-item-format row">
+          <label for="yearpub" class="form-label">Year Published</label>
+          <input type="number" v-model="bookForm.pubYear" class="form-control" placeholder="Year Published"
+            id="yearpub">
+        </div>
 
-    <div class="form-item-format row">
-      <label for="pub" class="form-label">Publisher</label>
-      <input type="text" class="form-control" placeholder="Publisher" id="pub">
-    </div>
+        <div class="form-item-format row">
+          <label for="pub" class="form-label">Publisher</label>
+          <input type="text" v-model="bookForm.publisher" class="form-control" placeholder="Publisher" id="pub">
+        </div>
 
-    <div class="form-item-format row">
-      <label for="pgcount" class="form-label">Page Count</label>
-      <input type="number" class="form-control" placeholder="Page Count" id="pgcount">
-    </div>
+        <div class="form-item-format row">
+          <label for="pgcount" class="form-label">Page Count</label>
+          <input type="number" v-model="bookForm.pgCount" class="form-control" placeholder="Page Count" id="pgcount">
+        </div>
 
-    <div class="form-item-format row">
-      <label for="msrp" class="form-label">MSRP</label>
-      <input type="number" class="form-control" placeholder="MSRP" id="msrp">
-    </div>
+        <div class="form-item-format row">
+          <label for="msrp" class="form-label">MSRP</label>
+          <input type="number" v-model="bookForm.msrp" class="form-control" placeholder="MSRP" id="msrp">
+        </div>
 
-    <div class="form-item-format row">
-      <input class="btn btn-primary" type="submit" value="Add Book">
-    </div>
+        <div class="form-item-format row">
+          <input class="btn btn-primary" type="submit" value="Add Book">
+        </div>
+      </div>
+    </form>
   </div>
   <script src="./js/index.js"></script>
 </body>
