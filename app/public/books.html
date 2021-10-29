@@ -69,6 +69,8 @@
           <th scope="col">Publisher</th>
           <th scope="col">Page Count</th>
           <th scope="col">MSRP</th>
+          <th scope="col">Edit</th>
+          <th scope="col">Delete</th>
         </tr>
       </thead>
       <tbody>
@@ -80,11 +82,13 @@
           <td>{{ book.publisher }}</td>
           <td>{{ book.pgCount }}</td>
           <td>{{ prettyDollar(book.msrp) }}</td>
+          <td><button type="button" class="btn btn-outline-secondary btn-sm" v-on:click="selectBookToEdit(book)">Edit</button></td>
+          <td><button type="button" class="btn btn-outline-secondary btn-sm" v-on:click="deleteBook(book)">Delete</button></td>
         </tr>
       </tbody>
     </table>
 
-    <form v-on:submit.prevent="addBook">
+    <form v-on:submit.prevent="postBook">
       <div class="col-6 form form-format">
         <div class="form-item-format row">
           <label for="title" class="form-label">Title</label>
@@ -118,7 +122,8 @@
         </div>
 
         <div class="form-item-format row">
-          <input class="btn btn-primary" type="submit" value="Add Book">
+          <!-- <input class="btn btn-primary" type="submit" value="Add Book"> -->
+          <button type="submit" class="btn btn-primary">{{ selectedBook === null ? "Add " : "Edit " }} Book</button>
         </div>
       </div>
     </form>
